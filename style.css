@@ -1,0 +1,40 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: "Segoe UI", Arial, sans-serif; min-height: 100vh; padding: 35px 20px; background: radial-gradient(circle at 10% 15%, rgba(255, 215, 120, 0.18), transparent 25%), radial-gradient(circle at 90% 75%, rgba(255, 255, 255, 0.10), transparent 30%), linear-gradient(135deg, #043d2e, #087f5b 50%, #06543d); position: relative; overflow-x: hidden; }
+body::before { content: "✦     ✧     ☪     ✧     ✦"; position: fixed; top: 35px; left: 0; width: 100%; text-align: center; font-size: 30px; letter-spacing: 18px; color: rgba(255, 224, 150, 0.17); pointer-events: none; }
+body::after { content: "✧     ✦     ✧     ✦"; position: fixed; bottom: 20px; right: 15px; font-size: 25px; letter-spacing: 12px; color: rgba(255, 224, 150, 0.23); pointer-events: none; }
+.container { width: 100%; max-width: 700px; margin: 0 auto; position: relative; z-index: 1; }
+.header { text-align: center; margin-bottom: 35px; }
+.moon { color: #f5d77e; font-size: 38px; margin-bottom: 5px; text-shadow: 0 0 20px rgba(255, 215, 120, 0.5); }
+h1 { font-size: 44px; font-weight: 800; letter-spacing: 1px; background: linear-gradient(120deg, #d4af37, #fff5cb, #ffffff, #e6bd55); -webkit-background-clip: text; background-clip: text; color: transparent; filter: drop-shadow(0 3px 8px rgba(0,0,0,0.2)); }
+.subtitle { margin-top: 8px; color: #f5e9c7; font-size: 17px; letter-spacing: 0.5px; }
+.decoration { margin-top: 15px; color: #f4d06f; font-size: 18px; }
+.welcome { margin-top: 12px; color: rgba(255,255,255,0.8); font-size: 14px; font-style: italic; }
+.card { position: relative; overflow: hidden; background: linear-gradient(145deg, #ffffff, #f3faf6); padding: 45px 50px; border-radius: 28px; border: 1px solid rgba(255,255,255,0.8); box-shadow: 0 20px 55px rgba(0, 30, 20, 0.30), 0 0 30px rgba(255, 215, 120, 0.08); }
+.card::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 8px; background: linear-gradient(90deg, #bd942e, #fff0a6, #d4af37, #fff0a6, #bd942e); }
+.card-heading { display: flex; justify-content: center; align-items: center; gap: 12px; margin-bottom: 12px; }
+.card-heading h2 { color: #075b43; font-size: 22px; text-align: center; }
+.card-heading span { color: #d4af37; font-size: 22px; }
+.description { color: #788c81; text-align: center; font-size: 14px; margin-bottom: 25px; }
+.form-group { margin-bottom: 23px; }
+label { display: block; color: #075b43; font-size: 16px; font-weight: 700; margin-bottom: 10px; }
+input { width: 100%; padding: 16px 18px; border: 1.5px solid #d4e3d9; border-radius: 13px; background: #fcfefc; color: #174d39; font-size: 16px; outline: none; transition: 0.3s ease; }
+input::placeholder { color: #a1afa7; }
+input:focus { border-color: #0b9b6c; box-shadow: 0 0 0 4px rgba(11, 155, 108, 0.12); background: #ffffff; }
+button { width: 100%; padding: 17px; margin-top: 8px; border: none; border-radius: 13px; background: linear-gradient(110deg, #087f5b, #0ba678, #087f5b); color: white; font-size: 18px; font-weight: 800; cursor: pointer; box-shadow: 0 10px 25px rgba(8, 127, 91, 0.25); transition: all 0.3s ease; }
+button:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(8, 127, 91, 0.35); }
+button:active { transform: scale(0.98); }
+.hasil:empty { display: none; }
+.hasil { margin-top: 25px; padding: 28px; background: linear-gradient(145deg, #ffffff, #f0f8f3); border-left: 7px solid #d4af37; border-radius: 17px; color: #24533f; line-height: 1.9; box-shadow: 0 12px 30px rgba(0, 35, 25, 0.15); animation: muncul 0.4s ease; }
+.hasil h2 { color: #087f5b; font-size: 23px; margin-bottom: 15px; }
+.hasil h2::before { content: "☪ "; color: #d4af37; }
+.hasil p { margin-bottom: 8px; font-size: 15px; }
+.hasil strong { color: #087f5b; }
+.status { display: inline-block; padding: 5px 13px; border-radius: 20px; font-weight: 700; }
+.status-wajib { color: #087f5b; background: #d9f5e8; }
+.status-belum { color: #946c13; background: #fff2cc; }
+.pesan { margin-top: 15px; padding: 12px; border-radius: 10px; background: #eaf5ee; color: #286247; font-size: 14px; }
+.error { color: #b42318; background: #fff0ee; border-left-color: #d94841; }
+.footer { text-align: center; margin-top: 35px; color: #f5e9c7; font-size: 13px; line-height: 2; }
+.copyright { color: rgba(255,255,255,0.6); font-size: 12px; margin-top: 8px; }
+@keyframes muncul { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 600px) { body { padding: 25px 15px; } h1 { font-size: 35px; } .subtitle { font-size: 14px; } .card { padding: 35px 23px; border-radius: 22px; } .card-heading h2 { font-size: 19px; } label { font-size: 14px; } input { padding: 14px; font-size: 15px; } button { padding: 15px; font-size: 16px; } .hasil { padding: 20px; } body::before { font-size: 20px; letter-spacing: 8px; } }
