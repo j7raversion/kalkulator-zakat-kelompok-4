@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ZakatCalc adalah kalkulator zakat penghasilan berbasis web.">
+    <title>ZakatCalc - Kalkulator Zakat Penghasilan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="moon">☪</div>
+            <h1>ZakatCalc</h1>
+            <p class="subtitle">Kalkulator Zakat Penghasilan</p>
+            <div class="decoration">✦ ───── 🌙 ───── ✦</div>
+            <p class="welcome">Hitung zakatmu, sempurnakan ibadahmu.</p>
+        </header>
+        <main>
+            <section class="card">
+                <div class="card-heading">
+                    <span>✧</span>
+                    <h2>Hitung Zakat Penghasilan</h2>
+                    <span>✧</span>
+                </div>
+                <p class="description">Masukkan informasi penghasilanmu untuk mengetahui kewajiban zakat.</p>
+                <form id="zakatForm">
+                    <div class="form-group">
+                        <label for="penghasilan">💰 Penghasilan per Bulan</label>
+                        <!-- Ganti type="number" jadi type="text" -->
+                        <input type="text" id="penghasilan" placeholder="Contoh: 20.000.000" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="kebutuhan">🏠 Kebutuhan Pokok / Cicilan Perbulan</label>
+                        <input type="text" id="kebutuhan" placeholder="Contoh: 3.000.000" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="hargaEmas">🪙 Harga Emas per Gram</label>
+                        <input type="text" id="hargaEmas" placeholder="Contoh: 2.000.000" required>
+                    </div>
+                    <button type="submit" id="hitungButton">✦ Hitung Zakat ✦</button>
+                </form>
+            </section>
+            <section id="hasil" class="hasil" aria-live="polite"></section>
+        </main>
+        <footer class="footer">
+            <p>🌙 ZakatCalc - Kalkulator Zakat Penghasilan</p>
+            <p>Semoga setiap rezeki membawa keberkahan.</p>
+            <p class="copyright">© 2026 ZakatCalc | Kelompok 4</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
