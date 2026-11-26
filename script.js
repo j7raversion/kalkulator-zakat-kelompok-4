@@ -24,3 +24,17 @@ zakatForm.addEventListener("submit", function(event) {
 
     hasil.innerHTML = `<h2>Hasil: ${status} - Rp ${zakat}</h2>`;
 });
+
+// Fungsi Format Rupiah
+function formatRupiah(angka) {
+    return new Intl.NumberFormat("id-ID", {
+        style: "currency", currency: "IDR",
+        minimumFractionDigits: 0, maximumFractionDigits: 0
+    }).format(angka);
+}
+
+// Validasi Input
+if (kebutuhan > penghasilan) {
+    alert("Kebutuhan pokok tidak boleh melebihi penghasilan.");
+    return;
+}
